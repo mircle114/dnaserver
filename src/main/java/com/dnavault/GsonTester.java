@@ -21,15 +21,9 @@ public class GsonTester {
     {
         GsonBuilder builder = new GsonBuilder();
         builder.setPrettyPrinting();
-
         Gson gson = builder.create();
-        Student returnObj = gson.fromJson(jsonString, Student.class);
-       /// System.out.println(returnObj);
-
-        ///jsonString = gson.toJson(returnObj);
-       ///System.out.println(jsonString);
-
-        return returnObj;
+        Student student = gson.fromJson(jsonString, Student.class);
+        return student;
     }
 }
 
