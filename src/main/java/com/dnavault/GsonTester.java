@@ -1,6 +1,8 @@
-package com.dnavault.lab;
+package com.dnavault;
 
 import com.google.gson.Gson;
+
+
 import com.google.gson.GsonBuilder;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,19 +14,20 @@ import java.net.URL;
 
 
 public class GsonTester {
-    public <T> T deserialize(T theClass, String jsonString)
-    {
-        //String jsonString = "{\"name\":\"Mahesh\", \"age\":21}";
 
+    public GsonTester(){}
+
+    public static Student deser(String jsonString)
+    {
         GsonBuilder builder = new GsonBuilder();
         builder.setPrettyPrinting();
 
         Gson gson = builder.create();
-        T returnObj = gson.fromJson(jsonString, (Type) theClass);
-        System.out.println(returnObj);
+        Student returnObj = gson.fromJson(jsonString, Student.class);
+       /// System.out.println(returnObj);
 
-        jsonString = gson.toJson(returnObj);
-        System.out.println(jsonString);
+        ///jsonString = gson.toJson(returnObj);
+       ///System.out.println(jsonString);
 
         return returnObj;
     }

@@ -1,4 +1,4 @@
-package com.dnavault.lab;
+package com.dnavault;
 
 import jdk.nashorn.internal.parser.JSONParser;
 

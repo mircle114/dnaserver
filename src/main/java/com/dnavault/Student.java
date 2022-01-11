@@ -1,6 +1,6 @@
-package com.dnavault.lab;
+package com.dnavault;
 
-class Student {
+public class Student {
     private String name;
     private int age;
     public Student(){}
