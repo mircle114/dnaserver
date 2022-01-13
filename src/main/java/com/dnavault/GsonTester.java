@@ -4,60 +4,55 @@ import com.google.gson.Gson;
 import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.GsonBuilder;
-
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Supplier;
 
 
-public class GsonTester {
+public class GsonTester <T>
+{
 
-    public GsonTester(){}
+    public GsonTester(T type)
+    {
 
-    public static Student deser(String jsonString)
+    }
+
+
+
+ //   static class TypeContainer<T> {
+   //     private final Supplier<T> supplier;
+
+     //   TypeContainer(Supplier<T> supplier) {
+       //     this.supplier = supplier;
+        //}
+
+        //T createContents() {
+         //   return supplier.get();
+        //}
+    //}
+
+    public static <T> T deSerialize(String jsonString, Class<T> cls) throws Exception
     {
         GsonBuilder builder = new GsonBuilder();
         builder.setPrettyPrinting();
         Gson gson = builder.create();
-        Student student = gson.fromJson(jsonString, Student.class);
-        return student;
+
+        T objT = gson.fromJson(jsonString,cls);
+        return objT;
     }
-
-   // public static <T> T deserialize(String jsonString)
-    //{
-      //  GsonBuilder builder = new GsonBuilder();
-       // builder.setPrettyPrinting();
-        //Gson gson = builder.create();
-
-       // return g.
-
-        //De-serialization - get the type of the collection.
-
-        //Type objType = new TypeToken<T>(){}.getType();
-        //pass the type of collection
-//        T marks = gson.fromJson(jsonString, TypeToken.get(new T().getClass().getType()));
-     //   System.out.println("marks:" +marks);
-
-
-
-        // TypeToken<T> typeToken = new TypeToken<T>() {};
-       // TypeToken.getParameterized(ArrayList.class, myClass).getType();
-
-      //  T objType = gson.fromJson(jsonString, get(Student.class));
-        //return (T) marks;
-    //}
 
     public static <E> void append(List<E> list, Class<E> cls) throws Exception {
         E elem = cls.newInstance();   // OK
         list.add(elem);
     }
+
+    // Some misc examples
+       // TypeToken<T> typeToken = new TypeToken<T>() {};
+       // TypeToken.getParameterized(ArrayList.class, myClass).getType();
+      //  T objType = gson.fromJson(jsonString, get(Student.class));
+        //return (T) marks;
+    //}
+
+
 }
 
 
