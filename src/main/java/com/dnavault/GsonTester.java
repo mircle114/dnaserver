@@ -16,20 +16,6 @@ public class GsonTester <T>
 
     }
 
-
-
- //   static class TypeContainer<T> {
-   //     private final Supplier<T> supplier;
-
-     //   TypeContainer(Supplier<T> supplier) {
-       //     this.supplier = supplier;
-        //}
-
-        //T createContents() {
-         //   return supplier.get();
-        //}
-    //}
-
     public static <T> T deSerialize(String jsonString, Class<T> cls) throws Exception
     {
         GsonBuilder builder = new GsonBuilder();
