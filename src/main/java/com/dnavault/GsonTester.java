@@ -23,6 +23,11 @@ public class GsonTester <T>
         return gson;
     }
 
+    public static <T> String serialize(T typeObj)
+    {
+       String serialized = getGson().toJson(typeObj);
+       return serialized;
+    }
 
     public static <T> T deSerialize(String jsonString, Class<T> cls) throws Exception
     {

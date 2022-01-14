@@ -6,6 +6,8 @@ public class DnaApp
         String jsonString = "{\"name\":\"Mahesh\", \"age\":21}";
         Student student = GsonTester.deSerialize(jsonString,Student.class);
         System.out.println(student);
+        String serializedJson = GsonTester.serialize(student);
+        System.out.println(serializedJson);
     }
 
 
