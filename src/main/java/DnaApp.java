@@ -1,4 +1,5 @@
 import com.dnavault.Student;
+import com.dnavault.DnaBuilder;
 import com.dnavault.GsonTester;
 import java.io.File;
 import java.io.FileWriter;
@@ -16,8 +17,10 @@ public class DnaApp
         String serializedJson = GsonTester.serialize(student);
         System.out.println(serializedJson);
 
+        //"src/main/java/com/dnavault/Hello.java"
+        DnaBuilder.build("src/main/java/com/dnavault/");
     
-      runIt();
+      //runIt();
   
 
     }
