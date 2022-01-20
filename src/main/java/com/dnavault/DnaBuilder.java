@@ -18,8 +18,15 @@ public class DnaBuilder
     {
         try
         {
-            File sourceFile = new File(pathToBuild);
-          
+            //File sourceFile = new File(pathToBuild);
+            
+            File sourcePath = new File(pathToBuild);
+
+            File[] files = sourcePath.listFiles();
+
+            // https://stackabuse.com/java-list-files-in-a-directory/
+
+
             /* //FileWriter writer = new FileWriter(sourceFile);
            // writer.write("package com.dnavault;\n public class Hello{ \n" + " public Hello(){}\n public void doit(String msg) { \n"
            //   + "   System.out.printf(\"Hello %s\\n\",msg); \n" + " }\n" + "}");
