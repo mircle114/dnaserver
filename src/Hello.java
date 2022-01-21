@@ -1,4 +1,3 @@
-package consume;
  public class Hello{ 
  public Hello(){}
  public void doit(String msg) { 

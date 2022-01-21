@@ -17,7 +17,7 @@ public class DnaApp
         //"src/main/java/com/dnavault/Hello.java"
         DnaBuilder.build("src/main/java/consume/");
     
-      //runIt();
+        runIt();
   
 
     }
@@ -27,7 +27,7 @@ public class DnaApp
     try {
       Class params[] = {};
       Object paramsObj[] = {"tester"};
-      Class thisClass = Class.forName("com.dnavault.Hello");
+      Class thisClass = Class.forName("Hello");
       Object iClass = thisClass.newInstance();
       Method thisMethod = thisClass.getMethod("doit", String.class);
       thisMethod.invoke(iClass, paramsObj);
