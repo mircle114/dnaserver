@@ -18,10 +18,8 @@ public class DnaBuilder
     {
         try
         {
-            File sourceFile = new File(pathToBuild);
-            
+            //File sourceFile = new File(pathToBuild);
             File sourcePath = new File(pathToBuild);
-
             File[] files = sourcePath.listFiles();
 
             // https://stackabuse.com/java-list-files-in-a-directory/

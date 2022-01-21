@@ -5,9 +5,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.lang.reflect.Method;
 
-
-
-
 public class DnaApp
 {
     public static void main(String[] args) throws Exception {
@@ -18,7 +15,7 @@ public class DnaApp
         System.out.println(serializedJson);
 
         //"src/main/java/com/dnavault/Hello.java"
-        DnaBuilder.build("src/main/java/com/dnavault/");
+        DnaBuilder.build("src/main/java/consume/");
     
       //runIt();
   
