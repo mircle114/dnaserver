@@ -37,7 +37,7 @@ public class DnaBuilder
                 null, null, null);
     
                 fileManager.setLocation(StandardLocation.CLASS_OUTPUT, Arrays
-              .asList(new File("target/classes/consumption/")));
+              .asList(new File("target/classes/consume/")));
           // Compile the file
           compiler.getTask(null, fileManager, null, null, null,
               fileManager.getJavaFileObjectsFromFiles(Arrays.asList(files)))
