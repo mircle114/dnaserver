@@ -1,4 +1,6 @@
+consume/Hello.class
 com/dnavault/DnaData.class
+com/dnavault/DnaBuilder.class
 com/dnavault/Student.class
 DnaApp.class
 com/dnavault/GsonTester.class

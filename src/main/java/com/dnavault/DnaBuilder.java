@@ -18,7 +18,7 @@ public class DnaBuilder
     {
         try
         {
-            //File sourceFile = new File(pathToBuild);
+            File sourceFile = new File(pathToBuild);
             
             File sourcePath = new File(pathToBuild);
 
@@ -40,7 +40,7 @@ public class DnaBuilder
               .asList(new File("target/classes/consumption/")));
           // Compile the file
           compiler.getTask(null, fileManager, null, null, null,
-              fileManager.getJavaFileObjectsFromFiles(Arrays.asList(sourceFile)))
+              fileManager.getJavaFileObjectsFromFiles(Arrays.asList(files)))
               .call();
           fileManager.close();
           
